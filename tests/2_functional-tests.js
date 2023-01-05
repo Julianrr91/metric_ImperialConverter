@@ -13,9 +13,9 @@ suite('Functional Tests', function() {
         .end(function(err, res){
             assert.equal(res.status, 200);
             assert.equal(res.type, 'application/json');
-            assert.equal(res.body.returnNum, 2.642);
+            assert.equal(res.body.returnNum, 2.64172);
             assert.equal(res.body.returnUnit, 'gal');
-            assert.equal(res.body.string, '10 Liters converts to 2.642 Gallons');
+            assert.equal(res.body.string, '10 Liters converts to 2.64172 Gallons');
             done();
         });
     });
