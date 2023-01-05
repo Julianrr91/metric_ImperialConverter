@@ -124,7 +124,7 @@ function ConvertHandler() {
         result = +(initNum / galToL).toFixed(5);
         break;
       case "lbs":
-        result = +(initNum * lbsToKg).toFixed(5);
+        result = +(initNum * lbsToKg).toFixed(6);
         break;
       case "kg":
         result = +(initNum / lbsToKg).toFixed(5);

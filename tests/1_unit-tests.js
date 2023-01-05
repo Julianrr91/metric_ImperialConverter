@@ -53,16 +53,16 @@ suite('Unit Tests', function(){
         }); 
         test('Should correctly convert L to gal.', function () {
           assert.equal(convertHandler.convert(1, "L"), (1/galToL).toFixed(5), `convert(1, "L") should return ${1/galToL.toFixed(5)}`);
-        });  
+        });
+        test('Should correctly convert lbs to kg.', function () {
+          assert.equal(convertHandler.convert(1, "lbs"), lbsToKg.toFixed(6), `convert(1, "lbs") should return ${lbsToKg.toFixed(6)}`);
+        });   
         test('Should correctly convert mi to km.', function () {
           assert.equal(convertHandler.convert(1, "mi"), miToKm.toFixed(5), `convert(1, "mi") should return ${miToKm.toFixed(5)}`);
         }); 
         test('Should correctly convert km to mi.', function () {
           assert.equal(convertHandler.convert(1, "km"), (1/miToKm).toFixed(5), `convert(1, "mi") should return ${(1/miToKm).toFixed(5)}`);
-        }); 
-        test('Should correctly convert lbs to kg.', function () {
-          assert.equal(convertHandler.convert(1, "lbs"), lbsToKg.toFixed(5), `convert(1, "lbs") should return ${lbsToKg.toFixed(5)}`);
-        }); 
+        });         
         test('Should correctly convert kg to lbs.', function () {
           assert.equal(convertHandler.convert(1, "kg"), (1/lbsToKg).toFixed(5), `convert(1, "mi") should return ${(1/lbsToKg).toFixed(5)}`);
         }); 
