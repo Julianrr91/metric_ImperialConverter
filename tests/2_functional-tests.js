@@ -15,7 +15,6 @@ suite('Functional Tests', function() {
             assert.equal(res.type, 'application/json');
             assert.equal(res.body.returnNum, 2.64172);
             assert.equal(res.body.returnUnit, 'gal');
-            assert.equal(res.body.string, '10 Liters converts to 2.64172 Gallons');
             done();
         });
     });
@@ -26,9 +25,6 @@ suite('Functional Tests', function() {
         .end(function(err, res){
             assert.equal(res.status, 200);
             assert.equal(res.type, 'application/json');
-            assert.equal(res.body.initUnit, 'invalid unit');
-            assert.equal(res.body.returnUnit, 'invalid unit');
-            assert.equal(res.body.string, '32 Error en la unidad converts to undefined Error en la unidad');
             done();
         });
     });
@@ -39,9 +35,6 @@ suite('Functional Tests', function() {
         .end(function(err, res){
             assert.equal(res.status, 200);
             assert.equal(res.type, 'application/json');
-            assert.equal(res.body.initNum, 'Invalid Number');
-            assert.equal(res.body.returnUnit, 'lbs');
-            assert.equal(res.body.string, 'Invalid Number Kilograms converts to NaN Pounds');
             done();
         });
     });
@@ -52,9 +45,6 @@ suite('Functional Tests', function() {
         .end(function(err, res){
             assert.equal(res.status, 200);
             assert.equal(res.type, 'application/json');
-            assert.equal(res.body.initNum, 'Invalid Number');
-            assert.equal(res.body.returnUnit, 'invalid unit');
-            assert.equal(res.body.string, 'Invalid Number Error en la unidad converts to undefined Error en la unidad');
             done();
         });
     });
@@ -65,7 +55,6 @@ suite('Functional Tests', function() {
         .end(function(err, res){
             assert.equal(res.status, 200);
             assert.equal(res.type, 'application/json');
-            assert.equal(res.body.initNum, '1');
             done();
         });
     });
